@@ -1,5 +1,8 @@
-function linkClick() {
+function handle(e) {
     alert ("We'll open a new tab for you!")
+    onclose (
+        alert ("thanks")
+    )
     return;
 }
 
@@ -10,14 +13,15 @@ var myImages = [
     "./img/sunsetRoad.jpg"
 ];
 
-function changeImg(that) {
+function changeImg(e) {
+    var el = e.target;
     var newImgNumber = Math.round(Math.random() * 3);
 
-    while (that.src.indexOf(myImages[newImgNumber]) != -1) {
+    while (el.src.indexOf(myImages[newImgNumber]) != -1) {
         newImgNumber = Math.round(Math.random() * 3);
     }
 
-    that.src= myImages[newImgNumber];
+    el.src= myImages[newImgNumber];
 
     return;
 }
