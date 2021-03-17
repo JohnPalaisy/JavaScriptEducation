@@ -1,7 +1,11 @@
 function linkClick() {
     alert ("We'll open a new tab for you!")
     return;
-}
+};
+
+function handle(e) {
+    alert(e.type);
+};
 
 var myImages = [
     "./img/cabinBoots.jpg",
@@ -20,4 +24,4 @@ function changeImg(that) {
     that.src= myImages[newImgNumber];
 
     return;
-}
+};
